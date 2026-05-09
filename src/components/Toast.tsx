@@ -1,4 +1,4 @@
-import { useState, useEffect, createContext, useContext, useCallback, useRef } from 'react'
+import { useState,createContext, useContext, useCallback, useRef } from 'react'
 
 interface ToastData { id: number; message: string; type?: 'success' | 'error' | 'info' }
 interface ToastCtx { toast: (msg: string, type?: ToastData['type']) => void }

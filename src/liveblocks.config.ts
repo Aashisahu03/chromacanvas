@@ -1,6 +1,5 @@
 import { createClient } from '@liveblocks/client'
 import { createRoomContext } from '@liveblocks/react'
-import type { UserPresence, LiveStorage } from '@/types'
 
 // ─────────────────────────────────────────────────────────────────────────────
 // SETUP:
@@ -9,7 +8,13 @@ import type { UserPresence, LiveStorage } from '@/types'
 // 3. Replace "pk_YOUR_PUBLIC_KEY" below with your actual key
 // 4. Set VITE_LIVEBLOCKS_KEY=pk_your_key in your .env file
 // ─────────────────────────────────────────────────────────────────────────────
-
+interface UserPresence {
+  [key: string]: any;
+  cursor: {
+    x: number
+    y: number
+  } | null
+}
 const client = createClient({
   publicApiKey: import.meta.env.VITE_LIVEBLOCKS_KEY || 'pk_dev_placeholder',
 })
@@ -21,7 +26,7 @@ export const {
   useStorage,
   useMutation,
   useUpdateMyPresence,
-} = createRoomContext<UserPresence, LiveStorage>(client)
+} = createRoomContext<UserPresence>(client)
 
 // Random pastel cursor colors for presence
 const COLORS = [
