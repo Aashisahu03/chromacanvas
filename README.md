@@ -2,7 +2,11 @@
 
 > A browser-based vector design tool with real-time multiplayer — built with React, TypeScript, Zustand, and Liveblocks.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/chromacanvas)
+**[Live Demo →](https://chromacanvas.vercel.app/)** · [Report Bug](https://github.com/yourusername/chromacanvas/issues) · [Request Feature](https://github.com/yourusername/chromacanvas/issues)
+
+![ChromaCanvas demo](./public/demo.gif)
+
+---
 
 ## Features
 
@@ -18,6 +22,8 @@
 - **Real-time multiplayer** — cursor presence + live sync via Liveblocks (optional)
 - **Snap to grid** — toggle grid + snap
 
+---
+
 ## Tech Stack
 
 | Layer | Choice | Why |
@@ -29,6 +35,8 @@
 | Styling | Tailwind CSS | Utility-first, no CSS files |
 | Build | Vite | Fast HMR, instant builds |
 | Deploy | Vercel | Zero-config, free |
+
+---
 
 ## Getting Started
 
@@ -44,7 +52,9 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:5173
+Open [http://localhost:5173](http://localhost:5173)
+
+---
 
 ## Multiplayer Setup (Optional)
 
@@ -56,6 +66,8 @@ Open http://localhost:5173
    ```
 4. In `src/components/Cursors.tsx`, uncomment the `LiveCursors` component
 5. Wrap your app in `RoomProvider` (see `src/liveblocks.config.ts`)
+
+---
 
 ## Keyboard Shortcuts
 
@@ -83,15 +95,7 @@ Open http://localhost:5173
 | `Shift+Arrows` | Nudge 10px |
 | `Shift+draw` | Constrain to square / aspect ratio |
 
-## Deployment
-
-```bash
-# Build
-npm run build
-
-# Deploy to Vercel
-npx vercel --prod
-```
+---
 
 ## Architecture
 
@@ -119,6 +123,20 @@ src/
 └── liveblocks.config.ts    # Multiplayer config
 ```
 
+---
+
+## Deployment
+
+```bash
+# Build
+npm run build
+
+# Deploy to Vercel
+npx vercel --prod
+```
+
+---
+
 ## Roadmap
 
 - [ ] Grouping (`Ctrl+G`)
@@ -130,7 +148,8 @@ src/
 - [ ] Dark/light theme toggle
 - [ ] Comments (Liveblocks threads)
 
+---
+
 ## License
 
 MIT
-updated
