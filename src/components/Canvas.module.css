@@ -1,0 +1,85 @@
+/* ── Canvas wrapper ───────────────────────────────────────────────────────── */
+.canvasWrap {
+    position: absolute;
+    /* fill the relative parent completely */
+    inset: 0;
+    overflow: hidden;
+    background: #0f0f11;
+}
+
+/* ── Main canvas element ──────────────────────────────────────────────────── */
+.canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* ── Cursor variants (applied via JS className swap) ─────────────────────── */
+.cursorDefault {
+    cursor: default;
+}
+
+.cursorGrab {
+    cursor: grab;
+}
+
+.cursorCrosshair {
+    cursor: crosshair;
+}
+
+.cursorText {
+    cursor: text;
+}
+
+.cursorMove {
+    cursor: move;
+}
+
+/* ── HUD overlays ─────────────────────────────────────────────────────────── */
+.zoomIndicator {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 1rem;
+    font-size: 0.75rem;
+    color: #333;
+    font-family: 'DM Mono', monospace;
+    pointer-events: none;
+    user-select: none;
+}
+
+.toolHint {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 1rem;
+    font-size: 0.75rem;
+    color: #2a2a35;
+    font-family: 'DM Mono', monospace;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* ── Text editing textarea overlay ───────────────────────────────────────── */
+.textEditOverlay {
+    position: fixed;
+    background: rgba(15, 10, 30, 0.85);
+    border: 1.5px solid #8b5cf6;
+    border-radius: 4px;
+    padding: 2px 6px;
+    outline: none;
+    resize: none;
+    line-height: 1.35;
+    z-index: 50;
+    overflow: hidden;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+    /* font-* and color are set via CSS custom properties (see below) */
+    font-size: var(--text-edit-font-size);
+    font-weight: var(--text-edit-font-weight);
+    font-family: var(--text-edit-font-family);
+    font-style: var(--text-edit-font-style);
+    color: var(--text-edit-color);
+    /* geometry */
+    left: var(--text-edit-x);
+    top: var(--text-edit-y);
+    width: var(--text-edit-w);
+    min-height: var(--text-edit-h);
+}

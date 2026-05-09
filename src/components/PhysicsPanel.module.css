@@ -1,0 +1,169 @@
+/* ── Wrapper ─────────────────────────────────────────────────────────────── */
+.wrapper {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 150;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ── Settings panel ──────────────────────────────────────────────────────── */
+.settings {
+    background: #18181d;
+    border: 1px solid #2a2a35;
+    border-radius: 10px;
+    padding: 12px 16px;
+    width: 260px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.settingsTitle {
+    font-size: 11px;
+    color: #555;
+    margin-bottom: 10px;
+    font-family: 'DM Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.sliderRow {
+    margin-bottom: 10px;
+}
+
+.sliderHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.sliderLabel {
+    font-size: 11px;
+    color: #888;
+}
+
+.sliderValue {
+    font-size: 11px;
+    color: #555;
+    font-family: 'DM Mono', monospace;
+}
+
+.slider {
+    width: 100%;
+    accent-color: #8b5cf6;
+}
+
+/* ── Controls bar ────────────────────────────────────────────────────────── */
+.bar {
+    background: #18181d;
+    border: 1px solid #2a2a35;
+    border-radius: 40px;
+    padding: 5px 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────────────────── */
+.btn {
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: Inter, sans-serif;
+    padding: 7px 14px;
+    transition: all 0.15s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btnSettings {
+    background: #1e1e26;
+    color: #555;
+    padding: 7px 10px;
+}
+
+.btnSettings:hover {
+    color: #aaa;
+}
+
+.btnSettingsActive {
+    background: #2d1f5e;
+    color: #c4b5fd;
+}
+
+.btnSimulate {
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    color: white;
+    padding: 7px 20px;
+}
+
+.btnPause {
+    background: #1e1e26;
+    color: #aaa;
+}
+
+.btnPause:hover {
+    color: #ddd;
+}
+
+.btnExplode {
+    background: #2d1020;
+    color: #f472b6;
+}
+
+.btnExplode:hover {
+    background: #3d1030;
+}
+
+.btnRestore {
+    background: #1e1e26;
+    color: #666;
+}
+
+.btnRestore:hover {
+    color: #aaa;
+}
+
+/* ── Live indicator ──────────────────────────────────────────────────────── */
+.liveWrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding-right: 6px;
+}
+
+.liveDot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 8px #22c55e;
+    animation: phys-pulse 1s ease infinite;
+}
+
+.liveText {
+    font-size: 10px;
+    color: #22c55e;
+    font-family: 'DM Mono', monospace;
+}
+
+@keyframes phys-pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: scale(0.7);
+    }
+}

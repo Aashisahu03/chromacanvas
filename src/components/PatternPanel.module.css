@@ -1,0 +1,272 @@
+/* ── Panel ───────────────────────────────────────────────────────────────── */
+.fab {
+    position: fixed;
+    bottom: 80px;
+    right: 24px;
+    z-index: 200;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0891b2, #7c3aed);
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(8, 145, 178, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.15s;
+}
+
+.fab:hover {
+    transform: scale(1.1);
+}
+
+.panel {
+    position: fixed;
+    bottom: 80px;
+    right: 24px;
+    z-index: 200;
+    width: 300px;
+    background: #18181d;
+    border: 1px solid #2a2a35;
+    border-radius: 12px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+    font-family: Inter, sans-serif;
+    overflow: hidden;
+}
+
+/* ── Header ──────────────────────────────────────────────────────────────── */
+.header {
+    padding: 10px 14px;
+    border-bottom: 1px solid #2a2a35;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerLeft {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.headerIcon {
+    color: #06b6d4;
+    font-size: 16px;
+}
+
+.headerTitle {
+    font-size: 13px;
+    font-weight: 600;
+    color: #e2e2e8;
+}
+
+.closeBtn {
+    background: none;
+    border: none;
+    color: #555;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    padding: 2px;
+}
+
+.closeBtn:hover {
+    color: #aaa;
+}
+
+/* ── Body ────────────────────────────────────────────────────────────────── */
+.body {
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ── Section label ───────────────────────────────────────────────────────── */
+.sectionLabel {
+    font-size: 10px;
+    color: #555;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: 'DM Mono', monospace;
+}
+
+/* ── Pattern grid ────────────────────────────────────────────────────────── */
+.patternGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+}
+
+.patternBtn {
+    border-radius: 6px;
+    padding: 6px 4px;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    border: 1px solid #2a2a35;
+    background: #1e1e26;
+    color: #666;
+}
+
+.patternBtn:hover {
+    border-color: #7c3aed;
+    color: #c4b5fd;
+}
+
+.patternBtn.active {
+    border-color: #7c3aed;
+    background: #2d1f5e;
+    color: #c4b5fd;
+}
+
+.patternBtnIcon {
+    font-size: 14px;
+}
+
+.patternBtnLabel {
+    font-size: 9px;
+}
+
+/* ── Shape kind ──────────────────────────────────────────────────────────── */
+.shapeRow {
+    display: flex;
+    gap: 6px;
+}
+
+.shapeBtn {
+    flex: 1;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s;
+    border: 1px solid #2a2a35;
+    background: #1e1e26;
+    color: #666;
+}
+
+.shapeBtn:hover {
+    border-color: #7c3aed;
+    color: #c4b5fd;
+}
+
+.shapeBtn.active {
+    border-color: #7c3aed;
+    background: #2d1f5e;
+    color: #c4b5fd;
+}
+
+/* ── Sliders ─────────────────────────────────────────────────────────────── */
+.sliderRow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.sliderHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.sliderLabel {
+    font-size: 11px;
+    color: #888;
+}
+
+.sliderValue {
+    font-size: 11px;
+    color: #555;
+    font-family: 'DM Mono', monospace;
+}
+
+.slider {
+    width: 100%;
+    accent-color: #7c3aed;
+}
+
+/* ── Color gradient ──────────────────────────────────────────────────────── */
+.colorRow {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.colorSwatch {
+    position: relative;
+    flex: 1;
+}
+
+.colorSwatchPreview {
+    width: 100%;
+    height: 28px;
+    border-radius: 6px;
+    border: 1px solid #333;
+}
+
+.colorSwatchInput {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.gradientPreview {
+    flex: 2;
+    height: 28px;
+    border-radius: 6px;
+    border: 1px solid #333;
+}
+
+/* ── Rotate toggle ───────────────────────────────────────────────────────── */
+.rotateLabel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.rotateCheckbox {
+    accent-color: #7c3aed;
+    width: 14px;
+    height: 14px;
+}
+
+.rotateLabelText {
+    font-size: 12px;
+    color: #888;
+}
+
+/* ── Generate button ─────────────────────────────────────────────────────── */
+.generateBtn {
+    background: linear-gradient(135deg, #0891b2, #7c3aed);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    width: 100%;
+    transition: opacity 0.15s;
+}
+
+.generateBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: #1e1e26;
+}
