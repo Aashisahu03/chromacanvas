@@ -97,7 +97,7 @@ export function useTrackCursor() {
   const { viewport } = useCanvasStore()
 
   useEffect(() => {
-    const handler = (e: MouseEvent) => {
+    const handler = () => {
       // When Liveblocks is enabled, call updatePresence here:
       // const w = screenToWorld(e.clientX, e.clientY, viewport)
       // updatePresence({ cursor: { x: w.x, y: w.y } })

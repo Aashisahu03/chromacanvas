@@ -9,7 +9,7 @@ import { ToastProvider } from '@/components/Toast'
 import AIPanel from '@/components/AIPanel'
 import PhysicsPanel from '@/components/PhysicsPanel'
 import PatternPanel from '@/components/PatternPanel'
-import ColorMoodPanel from '@/components/Colormoodpanel'
+import ColorMoodPanel from '@/components/ColorMoodPanel'
 import ImagePanel from '@/components/ImagePanel'           // ← ADD THIS
 import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts'
 import { useCanvasStore, makeShape } from '@/store/canvasStore'
