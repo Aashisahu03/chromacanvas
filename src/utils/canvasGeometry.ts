@@ -31,7 +31,14 @@ export function getBoundingBox(shape: Shape) {
   if ('w' in shape && 'h' in shape) {
     return { x: shape.x, y: shape.y, w: shape.w, h: shape.h }
   }
-  return { x: shape.x, y: shape.y, w: 0, h: 0 }
+  const s = shape as { x: number; y: number }
+
+return {
+  x: s.x,
+  y: s.y,
+  w: 0,
+  h: 0,
+}
 }
 
 // ─── Selection handles ────────────────────────────────────────────────────
